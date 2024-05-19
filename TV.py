@@ -20,3 +20,12 @@ class TV:
     def setChannel(self, channel):
         if self.on and (1 <= channel <= 120): # sets channel iff TV is turned on
             self.channel = channel
+  
+    # A Process that returns the current volume
+    def getVolume(self):
+        return self.volumeLevel
+    
+    # A Process that sets new volume level
+    def setVolume(self, volume):
+        if self.on and (1 <= volume <= 7):
+            self.volumeLevel = volume
