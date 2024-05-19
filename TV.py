@@ -29,3 +29,23 @@ class TV:
     def setVolume(self, volume):
         if self.on and (1 <= volume <= 7):
             self.volumeLevel = volume
+            
+    # A Process  that increments channel number by 1
+    def channelUp(self):
+        if self.on and self.channel < 120:          
+            self.channel += 1
+
+    # A Process the decrements channel number by 1
+    def channelDown(self):
+        if self.on and self.channel > 1:             
+            self.channel -= 1
+
+    # A Process that increments volume level by 1
+    def volumeUp(self):
+        if self.on and self.volumeLevel < 7:         
+            self.volumeLevel += 1
+
+    # A Process the decrements volume level by 1
+    def volumeDown(self):
+        if self.on and self.volumeLevel > 1:         
+            self.volumeLevel -= 1
